@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- AUTOR Y DESCRIPCION  -->
+    <meta name="author" content="IBAR ROJAS Q.">
+    <meta name="description" content="Aplicando los conceptos y herramientas aprendidas hasta ahora, en este desafío deberás
+    programar un conversor de monedas a partir de un monto en pesos chilenos. Para esto será
+    necesario consultar la api mindicador.cl usando el método fetch.">
+    <!--- AUTOR Y DESCRIPCION  -->
+    <!--Google Fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,400;1,500&display=swap" rel="stylesheet">    
+    <!--Google Fonts --> 
+    <!--Fonts Awesome --> 
+    <script src="https://kit.fontawesome.com/6bbb95791d.js" crossorigin="anonymous"></script>
+    <!--Fonts Awesome -->
+    <!--Boostrap 5.1.3    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--mi estilos --> 
+    <link rel="stylesheet" href="assets/css/mystyle4.css">
+    <!--mi favicon --> 
+    <link rel="shortcut icon" href="favicon_conversor.png" type="image/x-icon">
+    <!--mi favicon --> 
+    <!-- CDN CHART -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- CDN CHART -->
+    <title>Conversor de Monedas</title>
+</head>
+<body>
+       <div class="container1">
+            <nav class="navbar navbar-light bg-secondary">
+                <div class="container">
+                    <a href="" class="navbar-brand">
+                        <img class="d-flex  align-text-top imgLogo" src="assets/img/conversor_monedas.jpg" 
+                        width="30" height="34" alt="">IbarNCC - NATIONAL CURRENCY CONVERTER
+                    </a> 
+                </div>           
+            </nav>    
+            <label for="">Pesos CLP</label><br>
+            <input type="text" class="idvalorCLP" id="idvalorCLP"  placeholder="Ingrese el Monto en CLP">
+            <br>
+            <label for="">Divisa a Convertir</label><br>
+            <select name="moneys" class="moneys" id="moneys"></select>
+            <br>
+            <button type="button" id="btnBuscar" class="btn btn-primary" onclick="Convertir();">Buscar</button>
+             <p>Resultado : <span id="idresult"></span></p>
+       </div>
+       <section class="grafica" id="idGrafica">
+        <div id="container-1">
+            <h1>Variación del Dolar</h1>
+            <label for="">Tipo de Grafica</label>
+            <select id="typeSelect" onchange="switchType()">
+                <option value="area">  Area</option>
+                <option value="column">Column</option>
+                <option value="jump-line">Jump Line</option>
+                <option value="line">Line</option>
+                <option value="marker">Marker</option>  
+                <option value="spline-area">Spline Area</option>  
+                <option value="spline">Spline</option>
+                <option value="step-area">Step Area</option>
+                <option value="step-line">Step Line</option>
+                <option value="stick">Stick</option>
+            </select>
+        </div>
+        <div class="grafica">
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
+    <script src="assets/js/index4.js"></script>
+</body>
+</html>

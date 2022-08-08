@@ -1,0 +1,65 @@
+/* DECLARACION DE PARAMETROS*/
+:root{
+    --color-fondo: #e5e4e4e2;
+    --font-familia:'Roboto', sans-serif;
+    --color-primario:#124F88;
+    --color-secundario:#F7C331;
+    --color_texto-inverso:white;
+    --color-texto:black;
+    --color-fondo-menu: #a1d3a1;/*#E5E5E5;*/
+    --color-fondo-section:	#f5deb3 ;/*#ffdead;*/
+    --color-fondo-menu-celu: #3A4460;
+    --color-fondo-busqueda: #e7e7e7; 	
+    --color-formulario:white;
+    --color-hover:#949c7c;
+    --color-hover-li:#0d0e27;
+    --color-fondo-boton: #bbcabd;
+}
+
+body {
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+  background-color:   var(--color-fondo);
+  font-family     : var(--font-familia);
+  font-size: 15px;
+}
+
+
+.container1{
+  background-color: var(--color-fondo-menu-celu);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label , h6, p{
+  color: var(--color-texto);
+}
+.idvalorCLP{
+  padding: 10px;
+  width: 35%;
+}
+
+.moneys{
+  padding: 10px;
+  width:35%;
+}
+
+button{
+  margin:40px;  
+  width: 35%;
+}
+.grafica{
+  background-color: var(--color-fondo);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 10px;
+}
